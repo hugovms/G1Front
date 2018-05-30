@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Mapa de caracteres -->
+    <meta charset="utf-8">
+
+    <!-- autor -->
+    <meta name="author" content="Hugo vieira">
+
+    <!-- mecanismos de busca-->
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- design responsivo/mobile first -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <!-- compatibilidade ie edge-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- css grid -->
+    <!-- css externo -->
+    <link href="css/radio.css" rel="stylesheet" type="text/css" media="screen">
+
+
+</head>
+
+<body>
+    <!-- Conteúdo do site -->
+    <div class="container" style="margin-top:70px;">
+        <!-- cabeçalho -->
+        <header><img id="icon" src="imagens/icone.png" height="60px">
+            <!-- titulo do header -->
+            <p>SpotiPobre</p>
+            <h1> Tocando agora: </h1>
+            <!-- nome da musica-->
+            <div id="nomeMusica"></div>
+        </header>
+        <br>
+        <!-- player -->
+        <main>
+            <!-- botao retroceder musica-->
+            <div id="player" class="row">
+
+                <div id="anterior" class="col-4"><button>&laquo;</button></div>
+
+                <!-- toca musica-->
+                <div class="col-4"><audio src="musica/Koven-MyLove.mp3" controls autoplay></audio></div>
+                <!-- avançar musica-->
+                <div id="proximo" class="col-4"><button>&raquo;</button></div>
+                <!-- música aleatoria-->
+                <div id="random" class="col-12"><button>&infin;</button></div>
+            </div>
+            <!-- playlist-->
+            <div id="playlist" class="row">
+                <section class="offset-col-12">
+                    <h2>Playlist:</h2>
+                    <hr>
+                    <div id="listaMusica"></div>
+                </section>
+            </div>
+        </main>
+
+
+
+    </div>
+    <!-- fim do container -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            //variaveis
+            var i = 0;
+            var nome = "";
+            var caminho = "musica/";
+            var extensao = ".mp3";
+            var musica = [
+                "Koven-MyLove",
+                "TwoFeet-GoFckYourself",
+                "Yeah-Yeah-Yeahs-Heads-Will-Roll"
+            ];
+            //próxima musica
+            $("#proximo").click(function() {
+                if (i < musica.length - 1)
+                    i++;
+                else
+                    i = 1;
+                $("audio").attr("src", caminho + musica[i] + extensao);
+                $("#nomeMusica").text(musica[i]);
+            });
+            $("#anterior").click(function() {
+                if (i > 0)
+                    i--;
+                else
+                    i = musica.length - 1;
+                $("audio").attr("src", caminho + musica[i] + extensao);
+                $("#nomeMusica").text(musica[i]);
+            });
+            //playlist
+            $("#listaMusica").ready(function() {
+                for (i = 0; i < musica.length; i++)
+                    nome += "<br>" + parseInt(i + 1) + " - " + musica[i];
+                $("#listaMusica").html(nome);
+            });
+            $("#nomeMusica").text(musica[i]);
+        });
+    </script>
+</body>
+
+</html>

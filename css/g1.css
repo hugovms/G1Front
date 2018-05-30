@@ -1,0 +1,42 @@
+        #logo{
+            transition:1s;
+        }
+        #logo:hover{
+            transform: rotate(60deg);
+            transition:1s;
+        }
+        .row{
+            margin-top:50px;
+        }
+        .imagem{
+            height:30%;
+            width:50%;
+        }
+        h2{
+            border-bottom: 1px solid red;
+            width:100%;
+        }
+        .h3-c:hover{
+           color:#8e0000;
+        }
+        .card-text{color:red}
+        .list-group-item{border-color:red}
+        
+        li img:hover {
+            transform:rotate3d(0, 1, 0, 360deg);
+            transition: 0.9s;
+        }
+        a{
+            text-decoration-line: none!important;
+        }
+        .btn{
+        background-color:#c4170c;
+        border-color:#c4170c;
+        }
+        .btn:hover{
+        background-color:#c4170c;
+        border-color:#c4170c;
+        }
+        .form-control{
+            border:none;
+        }

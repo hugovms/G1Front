@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Titulo -->
+    <title>Jason</title>
+
+    <!-- Mapa de caracteres -->
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <!-- design responsivo/mobile first -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link href="imagens/favicon.png" rel="shortcut icon" type="image/png">
+    <!-- compatibilidade ie edge-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <style>
+        body{
+            background-color:whitesmoke;
+        }
+    </style>
+</head>
+
+<body >
+    <!-- Conteúdo do site -->
+    <div class="container" style="margin-top:70px; float:left;">
+        <label>Nome:</label>
+        <input class="form-control" type="text" name="nome" id="nome" placeholder="Digite seu nome">
+        <br> 
+        <label>Idade:</label>
+        <input class="form-control" type="number" name="idade" id="idade" placeholder="Digite sua idade">
+        <br> 
+        <label>Profissão:</label>
+        <input class="form-control" type="text" name="profissao" id="profissao" placeholder="Digite sua profissao">
+        <br>
+            <button  style="background-color:green;" class="enviar btn btn-success">Enviar</button>
+    </div>
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            //Código Jquery aqui
+            //objeto JSon
+            
+            $(".enviar").click(function(){
+                var objeto = {
+                "nome": $("#nome").val(),
+                "idade": $("#idade").val(),
+                "profissao": $("#profissao").val()
+            };
+            alert("Nome: " + objeto.nome + "\n idade: " + objeto.idade + "\n Profissão: " + objeto.profissao);
+            });
+            //fim do json
+        });
+
+    </script>
+</body>
+
+</html>
