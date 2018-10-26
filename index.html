@@ -1,314 +1,627 @@
-<!DOCTYPE HTML>
-<head>
-    <!-- Título -->
-    <title>G1 - O portal de notícias da Globo</title>
-
-    <!-- Mapa de Caracteres -->
-    <meta charset="utf-8">
-
-    <!-- Autor -->
-    <meta name="author" content="HUGO VIEIRA">
-
-    <!-- Mecanismos de buscas -->
-    <meta name="robots" content="index, follow">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-
-    <!-- Design responsivo/Mobile First -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Compatibilidade com IE/Edge -->
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-
-    <!-- Favicon -->
-    <link href="imagens/logo2.png" rel="shortcut icon" type="image/jpg">
-
-    <!-- CSS Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <!-- CSS Externo -->
-    <link href="css/g1.css" rel="stylesheet" type="text/css" media="all">
-
-    <!-- CSS Interno -->
-    <style>
-        .display-3{
-            font-weight:600;
-            color:white;
-        }
-        .card-body p{color:black;}
-        #logo:hover {
-             transform: rotate3d(0, 1, 0, 360deg);
-            transition: 1s;
-        }
-
-        .row {
-            margin-top: 50px;
-        }
-
-        .imagem {
-            height: 30%;
-            width: 50%;
-        }
-
-        h2 {
-            border-bottom: 1px solid green;
-            width: 100%;
-        }
-
-        .paral {
-            min-height: 600px;
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: 50% 50%;
-        }
-
-        /* Paragrapgh for Parallax Section */
-
-        .paral p {
-            font-size: 24px;
-            color: #f5f5f5;
-            text-align: center;
-            line-height: 60px;
-            text-shadow: 1px 1px 1px black;
-        }
-
-        /* Heading for Parallax Section */
-
-        .paral h1 {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 60px;
-            text-align: center;
-            padding-top: 60px;
-            line-height: 100px;
-            text-shadow: 2px 2px 2px black;
-        }
-
-        /* Image for Parallax Section */
-
-        .paralsec {
-            background-image: url("imagens/general.jpg");
-        }
-
-        .paralsec1 {
-            background-image: url("imagens/youtube.jpg");
-        }
-
-        .paralsec2 {
-            background-image: url("imagens/trump.jpg");
-        }
-
-        .paralsec3 {
-            background-image: url("imagens/resumo_do_dia.jpg");
-        }
-
-        .paralsec4 {
-            background-image: url("imagens/metro.jpg");
-        }
-
-        /* Add more images for more sections */
-
-        /* Remove Bottom Margin from Jumbotron */
-
-        .jumbotron {
-            margin-bottom: 0;
-        }
-
-        /* Footer */
-
-        .wn-footer {
-            padding: 2.5rem 0;
-            text-align: center;
-            color: white;
-            background-color: #607D8B;
-            border-top: .05rem solid #e5e5e5;
-        }
-
-        .wn-footer a {
-            color: yellow;
-        }
-
-        .navbar {
-            opacity: 0.8;
-        }
-
-        .navbar li a:hover {
-            opacity: 1;
-            color: white;
-        }
-
-        #erro {
-            width: 100%;
-        }
-        .active{
-            color:black!important;
-        }
-        footer{
-            height:20px;
-            width:100%;
-            color:forestgreen;
-        }
-        h5{
-            color:red;
-        }
-        h5:hover{
-            color:darkred;
-        }
-    </style>
-
-</head>
-
-<body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#c4170c;">
-        <a class="navbar-brand" href="#home" id="lgo"><img id="logo" src="imagens/g1logo.png" alt="Logo" style="height: 50px; margin: -10px 0px -10px 0px"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-		<span class="navbar-toggler-icon"></span>
-	  </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" id="home" href="#">Home <span class="sr-only">atual</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="games" href="#">Jogos</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" id="parallax" href="#">Parallax</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" id="maq" href="#">Spotify-Online</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" id="saude" href="#">Ciência e saúde</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" id="formulario" href="#">Formulário</a>
-                </li>
-
-            </ul>
-        </div>
-    </nav>
-    <!-- Fim do Navbar -->
-
-    <!-- Container -->
-    <div id="conteudo">
-        <footer>
-        
-    </footer>
-    </div>
-
-    <!-- Fim do Container -->
-
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <!-- Popper.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-
-    <!-- Bootstrap.js -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-    <!-- Código jQuery do desenvolvedor -->
-    <script type="text/javascript">
-        $(document).ready(function() {
-
-            //ajax setup
-            $.ajaxSetup({
-                cache: false
-
-            });
-
-            //seu código jquery aqui
-            //carregar pág
-
-            function carregarPagina(pagina) {
-                //ajax
-
-                $.ajax({
-                    url: "conteudo/" + pagina + ".html",
-                    beforeSend: function() {
-                        $("#conteudo").html('<img src="imagens/carregar.gif" alt="carregando" style="align-content:center; margin:auto; display:flex; margin-top:200px;">');
-                    },
-                    success: function(result) {
-                        $("#conteudo").html(result);
-                    },
-                    statusCode: {
-                        404: function() {
-                            $("#conteudo").html('<img src="https://imagens.canaltech.com.br/67708.100042-Tela-azul-do-Windows.jpg" id="erro">"');
-                        }
-                    }
-                });
-                //fim do ajax
-
-            }
-            function menuAtivo(pagina)
-            {
-                $("nav div ul li a").removeClass("active");
-                $(pagina).addClass("active");
-                
-                
-            }
-            
-            carregarPagina('princ');
-                
-
-            //logo
-
-            $("#lgo").click(function() {
-                menuAtivo('#home');
-                carregarPagina('princ');
-            });
-
-            $("#home").click(function() {
-                menuAtivo('#home');
-                carregarPagina('princ');
-            });
-
-            $("#parallax").click(function() {
-                menuAtivo('#parallax');
-                carregarPagina('parallax');
-            });
-
-            $("#maq").click(function() {
-                menuAtivo('#maq');
-                carregarPagina('radio');
-            });
-
-            $("#saude").click(function() {
-                menuAtivo('#saude');
-                carregarPagina('saude');
-            });
-
-            $("#games").click(function() {
-                menuAtivo('#games');
-                carregarPagina('jogos');
-            });
-
-            //menu jg
-
-            $("#g1").click(function() {
-                menuAtivo('#g1');
-                carregarPagina('g1');
-            });
-
-            $("#formulario").click(function() {
-                menuAtivo('#formulario');
-                carregarPagina('formulario');
-            });
-
-
-
-
-        });
-
-    </script>
-
-</div>
-</body>
+<!DOCTYPE HTML>
+
+<head>
+
+    <!-- Título -->
+
+    <title>G1 - O portal de notícias da Globo</title>
+
+
+
+    <!-- Mapa de Caracteres -->
+
+    <meta charset="utf-8">
+
+
+
+    <!-- Autor -->
+
+    <meta name="author" content="HUGO VIEIRA">
+
+
+
+    <!-- Mecanismos de buscas -->
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="keywords" content="g1, web, noticias">
+
+    <meta name="description" content="Um site sobre noticias">
+
+
+
+    <!-- Design responsivo/Mobile First -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <!-- Compatibilidade com IE/Edge -->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+
+
+    <!-- Favicon -->
+
+    <link href="imagens/logo2.png" rel="shortcut icon" type="image/jpg">
+
+
+
+    <!-- CSS Bootstrap -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+    <!-- CSS Externo -->
+
+    <link href="css/g1.css" rel="stylesheet" type="text/css" media="all">
+
+
+
+    <!-- CSS Interno -->
+
+    <style>
+
+        .display-3{
+
+            font-weight:600;
+
+            color:white;
+
+        }
+
+        .card-body p{color:black;}
+
+        #logo:hover {
+
+             transform: rotate3d(0, 1, 0, 360deg);
+
+            transition: 1s;
+
+        }
+
+
+
+        .row {
+
+            margin-top: 50px;
+
+        }
+
+
+
+        .imagem {
+
+            height: 30%;
+
+            width: 50%;
+
+        }
+
+
+
+        h2 {
+
+            border-bottom: 1px solid green;
+
+            width: 100%;
+
+        }
+
+
+
+        .paral {
+
+            min-height: 600px;
+
+            background-attachment: fixed;
+
+            background-size: cover;
+
+            background-position: 50% 50%;
+
+        }
+
+
+
+        /* Paragrapgh for Parallax Section */
+
+
+
+        .paral p {
+
+            font-size: 24px;
+
+            color: #f5f5f5;
+
+            text-align: center;
+
+            line-height: 60px;
+
+            text-shadow: 1px 1px 1px black;
+
+        }
+
+
+
+        /* Heading for Parallax Section */
+
+
+
+        .paral h1 {
+
+            color: rgba(255, 255, 255, 0.8);
+
+            font-size: 60px;
+
+            text-align: center;
+
+            padding-top: 60px;
+
+            line-height: 100px;
+
+            text-shadow: 2px 2px 2px black;
+
+        }
+
+
+
+        /* Image for Parallax Section */
+
+
+
+        .paralsec {
+
+            background-image: url("imagens/general.jpg");
+
+        }
+
+
+
+        .paralsec1 {
+
+            background-image: url("imagens/youtube.jpg");
+
+        }
+
+
+
+        .paralsec2 {
+
+            background-image: url("imagens/trump.jpg");
+
+        }
+
+
+
+        .paralsec3 {
+
+            background-image: url("imagens/resumo_do_dia.jpg");
+
+        }
+
+
+
+        .paralsec4 {
+
+            background-image: url("imagens/metro.jpg");
+
+        }
+
+
+
+        /* Add more images for more sections */
+
+
+
+        /* Remove Bottom Margin from Jumbotron */
+
+
+
+        .jumbotron {
+
+            margin-bottom: 0;
+
+        }
+
+
+
+        /* Footer */
+
+
+
+        .wn-footer {
+
+            padding: 2.5rem 0;
+
+            text-align: center;
+
+            color: white;
+
+            background-color: #607D8B;
+
+            border-top: .05rem solid #e5e5e5;
+
+        }
+
+
+
+        .wn-footer a {
+
+            color: yellow;
+
+        }
+
+
+
+        .navbar {
+
+            opacity: 0.8;
+
+        }
+
+
+
+        .navbar li a:hover {
+
+            opacity: 1;
+
+            color: white;
+
+        }
+
+
+
+        #erro {
+
+            width: 100%;
+
+        }
+
+        .active{
+
+            color:black!important;
+
+        }
+
+        footer{
+
+            height:20px;
+
+            width:100%;
+
+            color:forestgreen;
+
+        }
+
+        h5{
+
+            color:red;
+
+        }
+
+        h5:hover{
+
+            color:darkred;
+
+        }
+
+    </style>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+    <!-- Navbar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#c4170c;">
+
+        <a class="navbar-brand" href="#home" id="lgo"><img id="logo" src="imagens/g1logo.png" alt="Logo" style="height: 50px; margin: -10px 0px -10px 0px"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+		<span class="navbar-toggler-icon"></span>
+
+	  </button>
+
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+
+                    <a class="nav-link active" id="home" href="#">Home <span class="sr-only">atual</span></a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link" id="games" href="#">Jogos</a>
+
+                </li>
+
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link" id="parallax" href="#">Parallax</a>
+
+                </li>
+
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link" id="maq" href="#">Spotify-Online</a>
+
+                </li>
+
+
+
+                <li class="nav-item">
+
+                    <a class="nav-link" id="saude" href="#">Ciência e saúde</a>
+
+                </li>
+
+                
+
+                <li class="nav-item">
+
+                    <a class="nav-link" id="formulario" href="#">Formulário</a>
+
+                </li>
+
+
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    <!-- Fim do Navbar -->
+
+
+
+    <!-- Container -->
+
+    <div id="conteudo">
+
+        <footer>
+
+        
+
+    </footer>
+
+    </div>
+
+
+
+    <!-- Fim do Container -->
+
+
+
+    <!-- jQuery -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+    <!-- Popper.js -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+
+    <!-- Bootstrap.js -->
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+    <!-- Código jQuery do desenvolvedor -->
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+
+
+            //ajax setup
+
+            $.ajaxSetup({
+
+                cache: false
+
+
+
+            });
+
+
+
+            //seu código jquery aqui
+
+            //carregar pág
+
+
+
+            function carregarPagina(pagina) {
+
+                //ajax
+
+
+
+                $.ajax({
+
+                    url: "conteudo/" + pagina + ".html",
+
+                    beforeSend: function() {
+
+                        $("#conteudo").html('<img src="imagens/carregar.gif" alt="carregando" style="align-content:center; margin:auto; display:flex; margin-top:200px;">');
+
+                    },
+
+                    success: function(result) {
+
+                        $("#conteudo").html(result);
+
+                    },
+
+                    statusCode: {
+
+                        404: function() {
+
+                            $("#conteudo").html('<img src="https://imagens.canaltech.com.br/67708.100042-Tela-azul-do-Windows.jpg" id="erro">"');
+
+                        }
+
+                    }
+
+                });
+
+                //fim do ajax
+
+
+
+            }
+
+            function menuAtivo(pagina)
+
+            {
+
+                $("nav div ul li a").removeClass("active");
+
+                $(pagina).addClass("active");
+
+                
+
+                
+
+            }
+
+            
+
+            carregarPagina('princ');
+
+                
+
+
+
+            //logo
+
+
+
+            $("#lgo").click(function() {
+
+                menuAtivo('#home');
+
+                carregarPagina('princ');
+
+            });
+
+
+
+            $("#home").click(function() {
+
+                menuAtivo('#home');
+
+                carregarPagina('princ');
+
+            });
+
+
+
+            $("#parallax").click(function() {
+
+                menuAtivo('#parallax');
+
+                carregarPagina('parallax');
+
+            });
+
+
+
+            $("#maq").click(function() {
+
+                menuAtivo('#maq');
+
+                carregarPagina('radio');
+
+            });
+
+
+
+            $("#saude").click(function() {
+
+                menuAtivo('#saude');
+
+                carregarPagina('saude');
+
+            });
+
+
+
+            $("#games").click(function() {
+
+                menuAtivo('#games');
+
+                carregarPagina('jogos');
+
+            });
+
+
+
+            //menu jg
+
+
+
+            $("#g1").click(function() {
+
+                menuAtivo('#g1');
+
+                carregarPagina('g1');
+
+            });
+
+
+
+            $("#formulario").click(function() {
+
+                menuAtivo('#formulario');
+
+                carregarPagina('formulario');
+
+            });
+
+
+
+
+
+
+
+
+
+        });
+
+
+
+    </script>
+
+
+
+</div>
+
+</body>
+
 </html>
